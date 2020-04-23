@@ -6,6 +6,8 @@
 
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
   
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   <title>Canada Winter Games</title>
   <meta name="description" content="Canada">
   <meta name="Aharon" content="Winter Games">
@@ -34,16 +36,71 @@
     </header>
  
 <center><p id="Welcome"><h1>Canada Winter Game's Medals</h1></p></center>
+<div class="container">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script>
+    let myChart = document.getElementById('myChart').getContext('2d');
 
 
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
 
+    let massPopChart = new Chart(myChart, {
+      type:'bar', 
+      data:{
+        labels:['Ice Hockey', 'Biathlon', 'Bobsleigh', 'Skeleton', 'Curling', 'Luge' , 'Skating' , 'Skiing', 'Snowboarding'],
+        datasets:[{
+          label:'Medals',
+          data:[
+            20,
+            3,
+            9,
+            4,
+            11,
+            2,
+            99,
+            39,
+            11
+             ],
+          backgroundColor:'red',
+          
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'Medals won by Canada',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+  </script>
 
-<footer>
-	<h2><p>Contact</p></h2>
- <h3><p> cell:555-5555 Email:Aharonbastian@hotmail.com</p></h3>
-</footer>
-
-
-  <script src="js/scripts.js"></script>
+ 
 </body>
 </html>
