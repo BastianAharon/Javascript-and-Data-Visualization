@@ -1,0 +1,65 @@
+
+		     .hidden {
+			 	display:none;
+			 }
+
+			 .selected {
+			 	background-color:#ccc;
+			 }
+
+			 .bottomtext {
+			 	position:relative;
+			 	top:280px;
+			 }
+
+
+
+			#topnav {
+				width:1000px;
+				height:80px;
+				font-size: 14px;
+				overflow: hidden;
+				padding:0;
+				border:0;
+
+			}
+
+			
+			#main_nav {
+				width: 560px;
+				float:right;
+				margin-right: 13px;
+			}
+
+			#main_nav ul{
+				float: right;
+				list-style: none;
+				margin-top:57px;
+			}
+
+			#main_nav ul li {
+				display:inline;
+				margin-left:25px;
+			}
+
+			#main_nav ul li a {
+				text-decoration: none;
+				color:##de1c12;
+				font-style: italic; 
+			}
+
+			#main_nav ul li a:hover {background-color:#FFD700;
+
+			}
+
+
+
+			#logo {
+				float:left;
+			}
+			#wrapper {
+				width: 1050px;
+				margin: 0px auto; 
+			}
+
+
